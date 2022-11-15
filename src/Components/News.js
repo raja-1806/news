@@ -83,14 +83,18 @@ export class News extends Component {
               return null;
             }
 
-            const { description, title, url, urlToImage } = element;
+            const { description, title, url, urlToImage, author, publishedAt, source } = element;
+            const {name} = source;
 
             return (
               <div className="col-md-4" key={url}>
                 <NewsItem
+                  author = {author || "Unknown"}
+                  date = { publishedAt } 
                   description={description || ""}
                   imageUrl={urlToImage}
                   news={url}
+                  sourceName  = {name}
                   title={title || ""}
                 />
               </div>
