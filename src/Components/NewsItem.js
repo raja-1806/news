@@ -11,7 +11,7 @@ export class NewsItem extends Component {
       <div className='my-3'>
             <div className="card">
             <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{left : '90%', zIndex : '1'}}> {sourceName}</span>
-               <img src={imageUrl || "https://fdn.gsmarena.com/imgroot/news/21/08/xiaomi-smart-home-india-annoucnements/-476x249w4/gsmarena_00.jpg"} className="card-img-top" alt="..." />
+               <img src={imageUrl || 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/1200px-No_image_3x4.svg.png '} className="card-img-top" alt="..." />
                
               <div className="card-body">
                 <h5 className="card-title">{title}</h5>
