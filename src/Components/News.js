@@ -22,7 +22,10 @@ export class News extends Component {
       loading: false,
       page: 1,
     };
-    document.title = `${this.props.category} - Daily News`;
+    document.title = `${this.capitalizeFirstLetter(this.props.category)} - Daily News`;
+  }
+  capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
   async updateNews(){
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3dceeb3f3c8342d1ba8e10bbb8a9be2d&page=${this.state.page}&pageSize=${this.props.pageSize}`;
@@ -56,7 +59,7 @@ export class News extends Component {
 
     return (
       <div className="container my-3">
-        <h1 className="text-center" style={{margin : '35px'}}>Top {this.props.category} Headlines</h1>
+        <h1 className="text-center" style={{margin : '35px'}}>Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
         {this.state.loading && <Spinner />}
 
         <div className="row">
