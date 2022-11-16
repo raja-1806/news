@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 
 class App extends Component {
-  pageSize = 12;
+  pageSize = 6;
   render() {
     return (
       <div className="App">
