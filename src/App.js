@@ -1,6 +1,6 @@
 import "./App.css";
 
-import React, { useState } from "react";
+import LoadingBar from 'react-top-loading-bar'
 import NavBar from "./Components/NavBar";
 import News from "./Components/News";
 import {
@@ -8,11 +8,11 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import LoadingBar from 'react-top-loading-bar'
+import React, { useState } from "react";
 
 const App = () =>{
-  let pageSize = 6;
   let apiKey = process.env.REACT_APP_NEWS_API;
+  let pageSize = 6;
  
   const [progress, setProgress] = useState(0)
   const changeProgress=(progress)=>{
