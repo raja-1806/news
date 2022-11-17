@@ -19,7 +19,8 @@ const NewsItem = (props) => {
           </div>
           <img
             src={
-              imageUrl || <NoImage />
+              // imageUrl || <NoImage />
+              imageUrl?imageUrl : <NoImage />
             }
             className="card-img-top"
             alt="..."
