@@ -1,4 +1,6 @@
 import React from "react";
+import NoImage from "./NoImage";
+
 
 const NewsItem = (props) => {
     let { title, description, imageUrl, news, author, date, sourceName } = props;
@@ -17,8 +19,7 @@ const NewsItem = (props) => {
           </div>
           <img
             src={
-              imageUrl ||
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/1200px-No_image_3x4.svg.png "
+              imageUrl || <NoImage />
             }
             className="card-img-top"
             alt="..."
