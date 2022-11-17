@@ -1,5 +1,4 @@
 import React from "react";
-import NoImage from "./NoImage";
 import DefaultImage from './NoImage.png'
 
 const NewsItem = (props) => {

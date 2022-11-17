@@ -5,9 +5,9 @@ import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const News = ({
+  apiKey,
+  category,
    country,
-   category,
-   apiKey,
    pageSize,
    setProgress 
 }) => {
